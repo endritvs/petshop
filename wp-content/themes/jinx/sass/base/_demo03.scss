@@ -1,0 +1,410 @@
+.lakit-dots--vertical-no .lakit-carousel[data-slider_options*="vertical"] .lakit-carousel__dots {
+	height: auto !important;
+}
+.lakit-dots--vertical-no .lakit-carousel[data-slider_options*="vertical"] .lakit-carousel__dots > span {
+	top: 0 !important;
+}
+.lakit-posts__thumbnail {
+	overflow: hidden;
+}
+.lakit-masonry-wrapper .lakit-images-layout__list.col-row {
+	margin: 0 !important;
+}
+.lakit-pagination {
+	z-index: 2;
+	position: relative;
+}
+.m1_testimonials {
+	overflow: hidden;
+	.swiper-slide-prev {
+		transform: scale(.85) translateX(25%);
+		transform-origin: right;
+	}
+	.swiper-slide-next {
+		transform: scale(.85) translateX(-25%);
+		transform-origin: left;
+	}
+	.swiper-slide-active {
+		z-index: 2;
+	}
+	.lakit-testimonials__item {
+		transition: transform .3s;
+		&:not(.swiper-slide-active) {
+			.lakit-testimonials__content {
+				opacity: .5;
+			}
+		}
+	}
+	@media(max-width: 767px){
+		.swiper-slide-next,
+		.swiper-slide-prev {
+			opacity: 0;
+		}
+	}
+}
+/*
+  $TEAM_MEMBER_PRESET_10
+*/
+.preset-type-10 {
+	&.lakit-team-member {
+		.lakit-team-member__content {
+			display: grid;
+			grid-template-areas:
+          "name socials"
+          "position socials"
+          "description description";
+		}
+		.lakit-team-member__name {
+			grid-area: name;
+		}
+		.lakit-team-member__position {
+			grid-area: position;
+		}
+		.lakit-team-member__socials {
+			grid-area: socials;
+			align-self: center;
+			justify-self: flex-end;
+		}
+	}
+}
+
+@media(max-width: 767px){
+	.lakit-testimonials.preset-type-10 .lakit-testimonials__infowrap{
+		flex-flow: column;
+		align-items: flex-start !important;
+	}
+	.lakit-testimonials.preset-type-10 .lakit-testimonials__rating{
+		margin-left: 0 !important;
+	}
+}
+
+/*
+  My Account
+*/
+body {
+	&:not(.elementor-editor-active) {
+		&.logged-in {
+			.show-for-loggedin {
+				display: block;
+			}
+			.show-for-guest {
+				display: none;
+			}
+		}
+		&:not(.logged-in) {
+			.show-for-loggedin {
+				display: none;
+			}
+			.show-for-guest {
+				display: block;
+			}
+		}
+	}
+}
+.elementor-widget-text-editor,
+.elementor-widget-theme-post-content {
+	p > a {
+		text-decoration: underline;
+		color: var(--theme-primary-color);
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.wp-embed-responsive .woocommerce-form p:first-child {
+	padding-bottom: 10px;
+}
+.page-content .elementor-section-wrap .woocommerce .woocommerce-form {
+	p {
+		color: #5C5C5C;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.5em;
+		label {
+			margin-bottom: 10px;
+		}
+	}
+}
+/*
+  Shop
+*/
+/*
+	Toolbar
+*/
+.wc-toolbar {
+	font-size: 0.9375em;
+	color: $secondary-color;
+	.lasf-custom-dropdown {
+		margin-left: 20px;
+		button {
+			padding: 10px 40px 10px 25px;
+			border: 1px solid $border-color;
+			border-radius: 50px;
+			&:after {
+				right: 22px;
+				font-size: .75em;
+				@media(max-width: 600px) {
+					right: 15px;
+				}
+			}
+		}
+	}
+}
+/*
+	Product
+*/
+.lakit-wc-tabs--content {
+	.product_desc-row {
+		@include display();
+		@include flex-flow(row wrap);
+		@include align-items(center);
+		@include justify-content(space-between);
+		width: 1170px;
+		margin: 0 auto;
+		max-width: 100%;
+		.product_desc-desc {
+			width: 40%;
+			max-width: 550px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			h4 {
+				font-size: var(--theme-h1-font-size);
+			}
+			ul {
+				list-style: none;
+				color: #808080;
+				font-weight: 600;
+				margin: 0;
+				padding: 1em 0;
+				li {
+					margin-bottom: .4em;
+					&:before {
+						content: '\ea20';
+						font-family: LaStudioIcons;
+						color: $primary-color;
+						margin-right: 15px;
+						font-size: .8em;
+					}
+				}
+			}
+		}
+		.product_desc-img {
+			width: 50%;
+			margin-top: 0.5em;
+			margin-bottom: 1em;
+		}
+		.product_desc-img,
+		.product_desc-desc {
+			@media(max-width: 767px) {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}
+/*
+  Cart
+*/
+.lakit-cart__list .widget_shopping_cart_content .button {
+	width: 100%;
+	margin: 10px 0 0;
+	line-height: 24px;
+	font-size: 0.875em;
+	padding: 15px 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #FFF;
+}
+/*
+  Header
+*/
+.lakit-nav-wrap:not(.lakit-active--mbmenu) .menu-item-link.menu-item-link-top .lakit-nav-link-text {
+	position: relative
+}
+.lakit-nav-wrap:not(.lakit-active--mbmenu) .menu-item-link.menu-item-link-top .lakit-nav-link-text:after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	border-bottom: 2px solid;
+	width: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: width 0.3s
+}
+.lakit-nav-wrap:not(.lakit-active--mbmenu) .lakit-nav__item:hover > .menu-item-link.menu-item-link-top .lakit-nav-link-text:after, .lakit-nav-wrap:not(.lakit-active--mbmenu) .current-menu-item > .menu-item-link.menu-item-link-top .lakit-nav-link-text:after {
+	width: 100%
+}
+.m6-banner {
+	.lakit-images-layout__content {
+		height: auto;
+		bottom: 0;
+		flex-flow: row;
+		width: 100%;
+		top: auto;
+	}
+	.m6-b1 {
+		.lakit-images-layout__content {
+			background: rgba(#EEA36C, 80%);
+		}
+	}
+	.m6-b2 {
+		.lakit-images-layout__content {
+			background: rgba(#FB8E8E, 80%);
+		}
+	}
+	.m6-b3 {
+		.lakit-images-layout__content {
+			background: rgba(#23DD84, 80%);
+		}
+	}
+	.m6-b4 {
+		.lakit-images-layout__content {
+			background: rgba(#FF5555, 80%);
+		}
+	}
+	.m6-b5 {
+		.lakit-images-layout__content {
+			background: rgba(#64EEDD, 80%);
+		}
+	}
+	.m6-b6 {
+		.lakit-images-layout__content {
+			background: rgba(#7196FB, 80%);
+		}
+	}
+}
+.m6-carousel .lakit-carousel--simple .lakit-carousel__item:hover .lakit-carousel__item-img {
+	transform: none;
+}
+div[swiper_cdots] {
+	.m5-hicon {
+		width: 70px;
+		height: 70px;
+		max-width: 70px;
+		@media(max-width: 1280px) {
+			width: 60px;
+			height: 60px;
+			max-width: 60px;
+		}
+		.elementor-widget-container {
+			display: flex;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+		}
+	}
+	.m5-hh {
+		max-width: calc(100% - 115px);
+		min-height: 80px;
+		display: flex;
+		align-items: center;
+		.elementor-heading-title {
+			color: #989898;
+			font-size: 22px;
+			font-weight: normal;
+			line-height: 40px;
+			@media(max-width: 1600px) {
+				font-size: 18px;
+				line-height: 32px;
+			}
+			@media(max-width: 1280px) {
+				font-size: 16px;
+				line-height: 26px;
+			}
+		}
+		@media(max-width: 1280px) {
+			max-width: calc(100% - 85px);
+			min-height: 60px;
+		}
+	}
+	&.active-swiper-cdots {
+		.elementor-heading-title {
+			color: #000;
+			font-size: 28px;
+			font-weight: 600;
+			@media(max-width: 1600px) {
+				font-size: 22px;
+			}
+			@media(max-width: 1280px) {
+				font-size: 20px;
+			}
+		}
+	}
+}
+.variations_form .variations select {
+	border-radius: 30px;
+}
+.flex-direction-nav a {
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .1) !important;
+}
+@media(max-width: 767px) {
+	.lakit-product-images.layout-type-1 .flex-direction-nav a {
+		bottom: 10px;
+		top: auto;
+		opacity: 1;
+	}
+	.lakit-product-images.layout-type-1 .flex-direction-nav a.flex-prev {
+		left: 50%;
+		margin-left: -50px;
+	}
+	.lakit-product-images.layout-type-1 .flex-direction-nav a.flex-next {
+		right: 50%;
+		margin-right: -50px;
+	}
+	.lakit-product-images.layout-type-1 .flex-viewport {
+		padding-bottom: 30px;
+		height: auto !important;
+	}
+	.lakit-product-images.layout-type-1 .flex-control-nav {
+		display: none !important;
+	}
+	.woocommerce-product-gallery a.woocommerce-product-gallery__trigger {
+		bottom: 50px !important;
+	}
+}
+
+.wtheme-style{
+	h5{
+		font-size: var(--theme-h3-font-size);
+		margin-bottom: 30px;
+		&:after{
+			content: "";
+			width: 40px;
+			display: block;
+			height: 6px;
+			background-color: $primary-color;
+			border-radius: 10px;
+			margin-top: 15px;
+		}
+	}
+	select{
+		border-radius: 30px;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		color: var(--theme-body-font-color);
+		li{
+			padding: 6px 0;
+			margin-bottom: 6px;
+		}
+		a{
+			font-size: 18px;
+			font-weight: bold;
+			line-height: normal;
+			&:hover{
+				color: $primary-color;
+			}
+		}
+	}
+	.tagcloud{
+		a{
+			font-size: 18px !important;
+			font-weight: bold;
+		}
+	}
+}

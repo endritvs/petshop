@@ -1,0 +1,127 @@
+/*------------------------------------------------------------------
+Woo Responsive
+-------------------------------------------------------------------*/
+
+@media(max-width: 1200px){
+  .wc-toolbar{
+    margin-bottom: 20px;
+    .woocommerce-result-count {
+      margin-bottom: 10px;
+    }
+  }
+  .products-list .product_item .product_item--info{
+    padding-left: 30px;
+  }
+  p.form-row {
+    margin-bottom: 20px;
+  }
+  form.track_order {
+    p{
+      &:first-child{
+        margin-bottom: 20px;
+      }
+    }
+  } 
+}
+
+@media(max-width: 992px){
+  .wc-toolbar {
+    font-size: 14px;
+  }
+  .products-list .product_item .item--excerpt{
+    font-size: 12px;
+  }
+  .products-grid .button{
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    margin: 3px;
+    &.quickview{
+      display: none;
+    }
+  }
+  .products-grid-8 .product_item--info-action .button{
+    line-height: 32px;
+  }
+}
+
+@media(max-width: 767px){
+
+  .elementor-icon-box-icon .elementor-icon {
+    vertical-align: middle;
+  }
+
+  .products-list:not(.products-list-mini){
+    .product_item{
+      .product_item--thumbnail {
+        width: 100%;
+        .quickview {
+          display: none;
+        }
+      }
+      .product_item--title {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      .product_item--info{
+        padding: 20px 0 0;
+        width: 100%;
+      }
+      .price{
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .wc-toolbar button{
+    margin-left: 20px;
+  }
+  .lasf-custom-dropdown button:after {
+    font-size: 10px;
+    right: 6px;
+  }
+}
+
+@media(max-width: 600px){
+  .wc-toolbar .lasf-custom-dropdown button {
+    padding: 5px 25px 5px 15px;
+    font-size: 13px;
+  }
+  .wc-toolbar .wc-view-toggle{
+    float: right;
+    margin-top: 5px;
+  }
+  .wc-toolbar .lasf-custom-dropdown {
+    margin: 0 5px 0 0;
+  }
+  .wc-toolbar .lasf-custom-dropdown.wc-view-count {
+    float: right;
+    display: none;
+  }
+  .wc-toolbar .woocommerce-result-count {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 767px) {
+  .wc-toolbar-container {
+    position: sticky;
+    position: -webkit-sticky;
+    top: calc( var(--lakit-header-height, 0) + var(--lakit-adminbar-height,0));
+    z-index: 3;
+    background-color: #fff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+  }
+  .wc-toolbar-top {
+    margin-bottom: 0;
+  }
+  table.variations,
+  .cart .wrap-cart-cta{
+    margin-bottom: 20px;
+  }
+}
